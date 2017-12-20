@@ -11,6 +11,7 @@ if has("win32")
 else
 	" On mac
 	call plug#begin('mac path here')
+endif
 
 " Make sure you use single quotes
 
