@@ -1,6 +1,8 @@
 " General Vim settings
 set number relativenumber
+set nowrap
 imap jk <esc>
+let g:airline_powerline_fonts = 1
 
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
@@ -10,10 +12,25 @@ if has("win32")
 	call plug#begin('C:/Temp/Plugins')
 else
 	" On mac
-	call plug#begin('mac path here')
+	call plug#begin('~/dev/VimPlugs')
 endif
 
-" Make sure you use single quotes
+" The dracula color plugin
+Plug 'dracula/vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'rakr/vim-one'
+Plug 'pangloss/vim-javascript'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " Initialize plugin system
 call plug#end()
+
+" Set the theme
+colorscheme one
+set background=light
+let g:airline_theme='atomic'
+
+if (has("termguicolors"))
+	set termguicolors
+endif
