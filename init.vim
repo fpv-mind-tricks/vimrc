@@ -29,7 +29,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'carlitux/deoplete-ternjs'
 Plug 'thinca/vim-localrc'
-Plug 'tweekmonster/deoplete-clang2'
+Plug 'zchee/deoplete-clang'
+"Plug 'tweekmonster/deoplete-clang2'
 Plug 'rhysd/vim-clang-format'
 Plug 'vim-syntastic/syntastic'
 
@@ -38,6 +39,8 @@ call plug#end()
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#clang#libclang_path = '/usr/local/Cellar/llvm/5.0.0/lib/libclang.dylib'
+let g:deoplete#sources#clang#clang_header = '/usr/local/Cellar/llvm/5.0.0/lib/clang/5.0.0/include/'
 
 " Set the theme
 colorscheme one
