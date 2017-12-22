@@ -33,6 +33,8 @@ Plug 'zchee/deoplete-clang'
 "Plug 'tweekmonster/deoplete-clang2'
 Plug 'rhysd/vim-clang-format'
 Plug 'vim-syntastic/syntastic'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'jremmen/vim-ripgrep'
 
 " Initialize plugin system
 call plug#end()
@@ -52,7 +54,9 @@ if (has("termguicolors"))
 endif
 
 nnoremap <tab> :CtrlPBuffer <CR>
-nnoremap <CR> :
+nnoremap å :
+nnoremap f /
+nnoremap F ?
 
 " syntastic
 set statusline+=%#warningmsg#
@@ -60,8 +64,8 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
 "let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_signs = 1
 let g:syntastic_aggregate_errors = 1
