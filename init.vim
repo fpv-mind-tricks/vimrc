@@ -1,4 +1,5 @@
 " General Vim settings
+set nohlsearch
 set number relativenumber
 set nowrap
 imap jk <esc>
@@ -51,15 +52,15 @@ if (has("termguicolors"))
 endif
 
 " Set the theme
-colorscheme one
-set background=light
+colorscheme dracula
+"set background=light
 let g:airline_theme='atomic'
 
 nnoremap <tab> :CtrlPBuffer <CR>
-nnoremap å :
+nnoremap + :
 nnoremap f /
 nnoremap F ?
-nnoremap <Space> :noh <CR>
+nnoremap <Space> :set hlsearch! <CR>
 
 " syntastic
 set statusline+=%#warningmsg#
