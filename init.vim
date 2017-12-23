@@ -35,6 +35,7 @@ Plug 'rhysd/vim-clang-format'
 Plug 'vim-syntastic/syntastic'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'jremmen/vim-ripgrep'
+Plug 'maksimr/vim-jsbeautify'
 
 " Initialize plugin system
 call plug#end()
@@ -44,19 +45,21 @@ let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#clang#libclang_path = '/usr/local/Cellar/llvm/5.0.0/lib/libclang.dylib'
 let g:deoplete#sources#clang#clang_header = '/usr/local/Cellar/llvm/5.0.0/lib/clang/5.0.0/include/'
 
-" Set the theme
-colorscheme one
-set background=light
-let g:airline_theme='atomic'
 
 if (has("termguicolors"))
 	set termguicolors
 endif
 
+" Set the theme
+colorscheme one
+set background=light
+let g:airline_theme='atomic'
+
 nnoremap <tab> :CtrlPBuffer <CR>
 nnoremap å :
 nnoremap f /
 nnoremap F ?
+nnoremap <Space> :noh <CR>
 
 " syntastic
 set statusline+=%#warningmsg#
@@ -71,3 +74,5 @@ let g:syntastic_enable_signs = 1
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_cpp_checkers = ["clang_tidy"]
 
+
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
