@@ -37,6 +37,8 @@ Plug 'vim-syntastic/syntastic'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'jremmen/vim-ripgrep'
 Plug 'maksimr/vim-jsbeautify'
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
 
 " Initialize plugin system
 call plug#end()
