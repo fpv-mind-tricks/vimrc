@@ -39,6 +39,7 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
+Plug 'scrooloose/nerdcommenter'
 
 " Initialize plugin system
 call plug#end()
@@ -63,6 +64,7 @@ nnoremap + :
 nnoremap f /
 nnoremap F ?
 nnoremap <Space> :set hlsearch! <CR>
+let mapleader = ","
 
 " syntastic
 set statusline+=%#warningmsg#
