@@ -40,6 +40,8 @@ Plug 'maksimr/vim-jsbeautify'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 Plug 'scrooloose/nerdcommenter'
+Plug 'jceb/vim-orgmode'
+Plug 'tpope/vim-speeddating'
 
 " Initialize plugin system
 call plug#end()
