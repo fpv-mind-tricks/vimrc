@@ -42,6 +42,7 @@ Plug 'junegunn/gv.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
+Plug 'enricobacis/vim-airline-clock'
 
 " Initialize plugin system
 call plug#end()
