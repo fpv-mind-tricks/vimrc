@@ -23,6 +23,7 @@ if has("win32")
         Plug 'vim-syntastic/syntastic'
         Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
         Plug 'tell-k/vim-autopep8'
+        Plug 'jremmen/vim-ripgrep'
 
 	" Windows plugins
         call plug#end()
