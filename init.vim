@@ -60,6 +60,7 @@ else
 	" Mac plugins
         " The dracula color plugin
         Plug 'dracula/vim'
+        Plug 'morhetz/gruvbox'
         Plug 'vim-airline/vim-airline'
         Plug 'vim-airline/vim-airline-themes'
         Plug 'rakr/vim-one'
@@ -81,6 +82,7 @@ else
         Plug 'jceb/vim-orgmode'
         Plug 'tpope/vim-speeddating'
         Plug 'enricobacis/vim-airline-clock'
+        Plug 'NLKNguyen/papercolor-theme' " Awsome bright theme
 
         call plug#end()
 
@@ -88,15 +90,17 @@ else
         let g:deoplete#enable_at_startup = 1
         let g:deoplete#sources#clang#libclang_path = '/usr/local/Cellar/llvm/5.0.0/lib/libclang.dylib'
         let g:deoplete#sources#clang#clang_header = '/usr/local/Cellar/llvm/5.0.0/lib/clang/5.0.0/include/'
+        set completeopt-=preview
 
         if (has("termguicolors"))
                 set termguicolors
         endif
 
         " Set the theme
-        colorscheme dracula
+        set background=light 
+        colorscheme PaperColor
         "set background=light
-        let g:airline_theme='atomic'
+        " let g:airline_theme='atomic'
 
         nnoremap <tab> :CtrlPBuffer <CR>
 
