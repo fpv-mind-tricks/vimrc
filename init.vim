@@ -24,13 +24,16 @@ if has("win32")
         Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
         Plug 'tell-k/vim-autopep8'
         Plug 'jremmen/vim-ripgrep'
+        Plug 'NLKNguyen/papercolor-theme' " Awsome bright theme
 
 	" Windows plugins
         call plug#end()
         set termguicolors
         " Set the theme
-        set background=dark 
-        colorscheme gruvbox
+        "" set background=dark 
+        "" colorscheme gruvbox
+        set background=light 
+        colorscheme PaperColor
         " Set the font
         " This is so buggy that I have to map a key to it...
         nnoremap <F3> :GuiFont! DejaVu Sans Mono for Powerline:h10 <CR> 
@@ -53,6 +56,8 @@ if has("win32")
         let g:deoplete#enable_at_startup = 1
 else
 	" On mac
+        " http://vimr.org/ <-- this seem like a solid alternative to neovim-qt
+        " for windows??
         " Mac pre plugins setup
         let g:airline_powerline_fonts = 1
 	call plug#begin('~/dev/VimPlugs')
