@@ -88,6 +88,7 @@ else
         Plug 'tpope/vim-speeddating'
         Plug 'enricobacis/vim-airline-clock'
         Plug 'NLKNguyen/papercolor-theme' " Awsome bright theme
+        Plug 'philip-karlsson/vim-tc-explorer'
 
         call plug#end()
 
@@ -129,5 +130,6 @@ endif
 nnoremap + :
 nnoremap f /
 nnoremap F ?
+nnoremap ä :SyntasticCheck <CR>
 nnoremap <Space> :set hlsearch! <CR>
 let mapleader = ","
