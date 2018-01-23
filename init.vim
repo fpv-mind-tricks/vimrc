@@ -88,6 +88,7 @@ else
         Plug 'tpope/vim-speeddating'
         Plug 'enricobacis/vim-airline-clock'
         Plug 'NLKNguyen/papercolor-theme' " Awsome bright theme
+        " TODO: Fix the unimpaired vim plugin for better mappings
         Plug 'philip-karlsson/vim-tc-explorer'
 
         call plug#end()
