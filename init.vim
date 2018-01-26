@@ -13,6 +13,7 @@ set expandtab
 " - Avoid using standard Vim directory names like 'plugin'
 if has("win32")
   " On Windows 
+  let g:python3_host_prog  = 'C:/Python34/python.exe'
   " Windows pre plugin setup
   call plug#begin('C:/Temp/Plugins')
   Plug 'dracula/vim'
