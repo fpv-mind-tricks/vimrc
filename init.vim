@@ -134,6 +134,7 @@ endif
 nnoremap + :
 nnoremap f /
 nnoremap F ?
+nnoremap å :Tc <CR>
 nnoremap ä :SyntasticCheck <CR>
 nnoremap <Space> :set hlsearch! <CR>
 let mapleader = ","
