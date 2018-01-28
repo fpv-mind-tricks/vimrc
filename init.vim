@@ -80,7 +80,6 @@ else
   Plug 'zchee/deoplete-clang'
   "Plug 'tweekmonster/deoplete-clang2'
   Plug 'rhysd/vim-clang-format'
-  Plug 'vim-syntastic/syntastic'
   Plug 'octol/vim-cpp-enhanced-highlight'
   Plug 'jremmen/vim-ripgrep'
   Plug 'maksimr/vim-jsbeautify'
@@ -93,6 +92,7 @@ else
   Plug 'NLKNguyen/papercolor-theme' " Awsome bright theme
   " TODO: Fix the unimpaired vim plugin for better mappings
   Plug 'philip-karlsson/vim-tc-explorer'
+  Plug 'w0rp/ale'
 
   call plug#end()
 
@@ -101,6 +101,15 @@ else
   let g:deoplete#sources#clang#libclang_path = '/usr/local/Cellar/llvm/5.0.0/lib/libclang.dylib'
   let g:deoplete#sources#clang#clang_header = '/usr/local/Cellar/llvm/5.0.0/lib/clang/5.0.0/include/'
   set completeopt-=preview
+
+  " Configure ALE
+  " let g:ale_linters = {'python': ['flake8']}
+  let g:ale_linters = {'python': ['flake8'], 'cpp': ['clang']}
+  " - Python
+  let g:ale_python_flake8_executable = 'python3'
+  let g:ale_python_flake8_options = '-m flake8'
+  " -- C/Cpp
+  " Configured using .local.vimrc files
 
   if (has("termguicolors"))
     set termguicolors
@@ -113,19 +122,6 @@ else
   " let g:airline_theme='atomic'
 
   nnoremap <tab> :CtrlPBuffer <CR>
-
-  " syntastic
-  set statusline+=%#warningmsg#
-  set statusline+=%{SyntasticStatuslineFlag()}
-  set statusline+=%*
-
-  let g:syntastic_always_populate_loc_list = 1
-  let g:syntastic_auto_loc_list = 0
-  let g:syntastic_check_on_open = 0
-  "let g:syntastic_check_on_wq = 0
-  let g:syntastic_enable_signs = 1
-  let g:syntastic_aggregate_errors = 1
-  let g:syntastic_cpp_checkers = ["clang_tidy"]
 
   autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 endif
