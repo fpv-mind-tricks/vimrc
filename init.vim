@@ -21,13 +21,14 @@ if has("win32")
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-  Plug 'vim-syntastic/syntastic'
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   Plug 'tell-k/vim-autopep8'
   Plug 'jremmen/vim-ripgrep'
   Plug 'NLKNguyen/papercolor-theme' " Awsome bright theme
   "" Awsome git frontend
   Plug 'tpope/vim-fugitive'
+  Plug 'philip-karlsson/vim-tc-explorer'
+  Plug 'w0rp/ale'
 
   " Windows plugins
   call plug#end()
@@ -45,16 +46,14 @@ if has("win32")
 
   nnoremap <tab> :CtrlPBuffer <CR>
 
-  let g:syntastic_always_populate_loc_list = 1
-  let g:syntastic_auto_loc_list = 0
-  let g:syntastic_check_on_open = 0
-  "let g:syntastic_check_on_wq = 0
-  let g:syntastic_enable_signs = 1
-  let g:syntastic_aggregate_errors = 1
-  let g:syntastic_cpp_checkers = ["clang_tidy"]
-  let g:syntastic_python_checkers = ['flake8']
-  let g:syntastic_python_flake8_exec = 'py'
-  let g:syntastic_python_flake8_args = ['-3', '-m', 'flake8']
+  " Configure ALE
+  let g:ale_linters = {'python': ['flake8']}
+  " - Python
+  let g:ale_python_flake8_executable = 'C:/Python34/python.exe'
+  let g:ale_python_flake8_options = '-m flake8'
+  " -- C/Cpp
+  " Configured using .local.vimrc files
+
   " Use deoplete.
   let g:deoplete#enable_at_startup = 1
 else
