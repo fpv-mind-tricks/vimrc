@@ -27,7 +27,7 @@ if has("win32")
   Plug 'NLKNguyen/papercolor-theme' " Awsome bright theme
   "" Awsome git frontend
   Plug 'tpope/vim-fugitive'
-  Plug 'philip-karlsson/vim-tc-explorer'
+  Plug 'philip-karlsson/bolt.nvim'
   Plug 'w0rp/ale'
 
   " Windows plugins
@@ -90,7 +90,7 @@ else
   Plug 'enricobacis/vim-airline-clock'
   Plug 'NLKNguyen/papercolor-theme' " Awsome bright theme
   " TODO: Fix the unimpaired vim plugin for better mappings
-  Plug 'philip-karlsson/vim-tc-explorer'
+  Plug 'philip-karlsson/bolt.nvim'
   Plug 'w0rp/ale'
 
   call plug#end()
