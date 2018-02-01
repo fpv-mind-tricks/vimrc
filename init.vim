@@ -120,7 +120,7 @@ else
   "set background=light
   " let g:airline_theme='atomic'
 
-  nnoremap <tab> :CtrlPBuffer <CR>
+  nnoremap <c-tab> :CtrlPBuffer <CR>
 
   autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 endif
@@ -130,6 +130,8 @@ nnoremap + :
 nnoremap f /
 nnoremap F ?
 nnoremap å :Tc <CR>
-nnoremap ä :SyntasticCheck <CR>
+nnoremap ö :Rg <CR>
+nnoremap <c-h> :cprevious <CR>
+nnoremap <c-l> :cnext <CR>
 nnoremap <Space> :set hlsearch! <CR>
 let mapleader = ","
