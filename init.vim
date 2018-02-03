@@ -120,7 +120,8 @@ else
   "set background=light
   " let g:airline_theme='atomic'
 
-  nnoremap <c-tab> :CtrlPBuffer <CR>
+  nnoremap <c-tab> <tab>
+  nnoremap <tab> :CtrlPBuffer <CR>
 
   autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 endif
