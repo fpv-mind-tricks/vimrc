@@ -92,6 +92,7 @@ else
   " TODO: Fix the unimpaired vim plugin for better mappings
   Plug 'philip-karlsson/bolt.nvim'
   Plug 'w0rp/ale'
+  Plug 'sebastianmarkow/deoplete-rust'
 
   call plug#end()
 
@@ -100,6 +101,10 @@ else
   let g:deoplete#sources#clang#libclang_path = '/usr/local/Cellar/llvm/5.0.0/lib/libclang.dylib'
   let g:deoplete#sources#clang#clang_header = '/usr/local/Cellar/llvm/5.0.0/lib/clang/5.0.0/include/'
   set completeopt-=preview
+
+  " Deoplete for rust
+  let g:deoplete#sources#rust#racer_binary='/Users/philipkarlsson/.cargo/bin/racer'
+  let g:deoplete#sources#rust#rust_source_path='/Users/philipkarlsson/dev/Rust/src'
 
   " Configure ALE
   " let g:ale_linters = {'python': ['flake8']}
