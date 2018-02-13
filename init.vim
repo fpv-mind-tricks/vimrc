@@ -93,6 +93,7 @@ else
   Plug 'philip-karlsson/bolt.nvim'
   Plug 'w0rp/ale'
   Plug 'sebastianmarkow/deoplete-rust'
+  Plug 'Shougo/neoinclude.vim'
 
   call plug#end()
 
@@ -120,8 +121,9 @@ else
   endif
 
   " Set the theme
-  set background=light 
-  colorscheme PaperColor
+  " set background=light 
+  " colorscheme PaperColor
+  colorscheme dracula
   "set background=light
   " let g:airline_theme='atomic'
 
@@ -141,3 +143,12 @@ nnoremap <c-h> :cprevious <CR>
 nnoremap <c-l> :cnext <CR>
 nnoremap <Space> :set hlsearch! <CR>
 let mapleader = ","
+
+
+" Enable logging of deoplete
+" let g:deoplete#enable_profile = 1
+" call deoplete#enable_logging('DEBUG', 'deoplete.log')
+
+" TODOs 2018-02-13
+" Change plugin to use vim-clang instead of deoplete (need crossplatform and
+" to be able to debug)
