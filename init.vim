@@ -30,6 +30,7 @@ if has("win32")
   Plug 'philip-karlsson/bolt.nvim'
   Plug 'w0rp/ale'
   Plug 'justmao945/vim-clang'
+  Plug 'haya14busa/incsearch.vim'
 
   " Windows plugins
   call plug#end()
@@ -98,6 +99,7 @@ else
   Plug 'w0rp/ale'
   Plug 'sebastianmarkow/deoplete-rust'
   Plug 'Shougo/neoinclude.vim'
+  Plug 'haya14busa/incsearch.vim'
 
   call plug#end()
 
@@ -139,7 +141,8 @@ endif
 
 " Post plugin initialization settings
 nnoremap + :
-nnoremap f /
+map f <Plug>(incsearch-stay)
+" nnoremap f /
 nnoremap F ?
 nnoremap å :Tc <CR>
 nnoremap ö :Rg <CR>
