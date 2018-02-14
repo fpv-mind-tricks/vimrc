@@ -36,8 +36,9 @@ if has("win32")
   " Set the theme
   "" set background=dark 
   "" colorscheme gruvbox
-  set background=light 
-  colorscheme PaperColor
+  " set background=light 
+  " colorscheme PaperColor
+  colorscheme dracula
   " Set the font
   " This is so buggy that I have to map a key to it...
   nnoremap <F3> :GuiFont! DejaVu Sans Mono for Powerline:h8 <CR> 
