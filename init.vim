@@ -29,6 +29,7 @@ if has("win32")
   Plug 'tpope/vim-fugitive'
   Plug 'philip-karlsson/bolt.nvim'
   Plug 'w0rp/ale'
+  Plug 'justmao945/vim-clang'
 
   " Windows plugins
   call plug#end()
@@ -57,6 +58,8 @@ if has("win32")
 
   " Use deoplete.
   let g:deoplete#enable_at_startup = 1
+  " Only load clang when dotfile
+  let g:clang_load_if_clang_dotfile = 1
 else
   " On mac
   " http://vimr.org/ <-- this seem like a solid alternative to neovim-qt
