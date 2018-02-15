@@ -31,6 +31,8 @@ if has("win32")
   Plug 'w0rp/ale'
   Plug 'justmao945/vim-clang'
   Plug 'haya14busa/incsearch.vim'
+  Plug 'junegunn/gv.vim'
+  Plug 'will133/vim-dirdiff'
 
   " Windows plugins
   call plug#end()
