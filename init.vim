@@ -33,6 +33,7 @@ if has("win32")
   Plug 'haya14busa/incsearch.vim'
   Plug 'junegunn/gv.vim'
   Plug 'will133/vim-dirdiff'
+  Plug 'mfukar/robotframework-vim'
 
   " Windows plugins
   call plug#end()
@@ -40,9 +41,9 @@ if has("win32")
   " Set the theme
   "" set background=dark 
   "" colorscheme gruvbox
-  " set background=light 
-  " colorscheme PaperColor
-  colorscheme dracula
+  set background=light 
+  colorscheme PaperColor
+  " colorscheme dracula
   " Set the font
   " This is so buggy that I have to map a key to it...
   nnoremap <F3> :GuiFont! DejaVu Sans Mono for Powerline:h8 <CR> 
@@ -143,7 +144,7 @@ endif
 
 " Post plugin initialization settings
 nnoremap + :
-map f <Plug>(incsearch-stay)
+map f <Plug>(incsearch-forward)
 " nnoremap f /
 nnoremap F ?
 nnoremap å :Tc <CR>
