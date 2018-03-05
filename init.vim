@@ -130,9 +130,9 @@ else
   endif
 
   " Set the theme
-  " set background=light 
-  " colorscheme PaperColor
-  colorscheme dracula
+  set background=light 
+  colorscheme PaperColor
+  " colorscheme dracula
   "set background=light
   " let g:airline_theme='atomic'
 
@@ -149,6 +149,7 @@ map f <Plug>(incsearch-forward)
 nnoremap F ?
 nnoremap å :Tc <CR>
 nnoremap ö :Rg <CR>
+nnoremap ä :checktime <CR>
 nnoremap <c-h> :cprevious <CR>
 nnoremap <c-l> :cnext <CR>
 nnoremap <Space> :set hlsearch! <CR>
