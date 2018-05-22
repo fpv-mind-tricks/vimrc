@@ -69,7 +69,8 @@ else
   " http://vimr.org/ <-- this seem like a solid alternative to neovim-qt
   " for windows??
   " Mac pre plugins setup
-  let g:airline_powerline_fonts = 1
+  let g:python3_host_prog  = 'python3'
+  " let g:airline_powerline_fonts = 1
   call plug#begin('~/dev/VimPlugs')
 
   " Mac plugins
@@ -125,13 +126,13 @@ else
   " -- C/Cpp
   " Configured using .local.vimrc files
 
-  if (has("termguicolors"))
-    set termguicolors
-  endif
+  " if (has("termguicolors"))
+  "  set termguicolors
+  " endif
 
   " Set the theme
   set background=light 
-  colorscheme PaperColor
+  colorscheme one
   " colorscheme dracula
   "set background=light
   " let g:airline_theme='atomic'
