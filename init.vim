@@ -1,57 +1,62 @@
-" General Vim settings
-set nohlsearch
-set number relativenumber
-set nowrap
-imap jk <esc>
-" Set tabs correctly
-set cindent
-set shiftwidth=2
-set expandtab
-
-" Specify a directory for plugins
-" - For Neovim: ~/.local/share/nvim/plugged
-" - Avoid using standard Vim directory names like 'plugin'
+" Platform specific preconds
 if has("win32")
-  " On Windows 
   let g:python3_host_prog  = 'C:/Python34/python.exe'
-  " Windows pre plugin setup
   call plug#begin('C:/Temp/Plugins')
-  Plug 'dracula/vim'
-  Plug 'morhetz/gruvbox'
-  Plug 'ctrlpvim/ctrlp.vim'
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  Plug 'tell-k/vim-autopep8'
-  Plug 'jremmen/vim-ripgrep'
-  Plug 'NLKNguyen/papercolor-theme' " Awsome bright theme
-  "" Awsome git frontend
-  Plug 'tpope/vim-fugitive'
-  Plug 'philip-karlsson/bolt.nvim'
-  Plug 'w0rp/ale'
-  Plug 'justmao945/vim-clang'
-  Plug 'haya14busa/incsearch.vim'
-  Plug 'junegunn/gv.vim'
-  Plug 'will133/vim-dirdiff'
-  Plug 'mfukar/robotframework-vim'
+elsif has("macunix")
+  call plug#begin('~/dev/VimPlugs')
+else
+  let g:python3_host_prog  = 'python3'
+  call plug#begin('~/dev/VimPlugs')
+endif
 
-  " Windows plugins
-  call plug#end()
-  set termguicolors
-  " Set the theme
-  "" set background=dark 
-  "" colorscheme gruvbox
-  set background=light 
-  colorscheme PaperColor
-  " colorscheme dracula
-  " Set the font
-  " This is so buggy that I have to map a key to it...
+" Install common plugins
+Plug 'dracula/vim'
+Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'rakr/vim-one'
+Plug 'pangloss/vim-javascript'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'carlitux/deoplete-ternjs'
+Plug 'thinca/vim-localrc'
+Plug 'zchee/deoplete-clang'
+"Plug 'tweekmonster/deoplete-clang2'
+Plug 'rhysd/vim-clang-format'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'jremmen/vim-ripgrep'
+Plug 'maksimr/vim-jsbeautify'
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'jceb/vim-orgmode'
+Plug 'tpope/vim-speeddating'
+Plug 'enricobacis/vim-airline-clock'
+Plug 'NLKNguyen/papercolor-theme' " Awsome bright theme
+" TODO: Fix the unimpaired vim plugin for better mappings
+" MOST IMPORTANT PLUGIN EVER :)
+Plug 'philip-karlsson/bolt.nvim'
+Plug 'w0rp/ale'
+Plug 'sebastianmarkow/deoplete-rust'
+Plug 'Shougo/neoinclude.vim'
+Plug 'haya14busa/incsearch.vim'
+
+" Install platform specific plugins
+if has("win32")
+elsif has("macunix")
+else
+endif
+
+" Finalize plugin installation
+call plug#end()
+
+" Platform independent plugin settings
+nnoremap <c-tab> <tab>
+nnoremap <tab> :CtrlPBuffer <CR>
+
+" Platform specific settings/hacks/workarounds
+if has("win32")
   nnoremap <F3> :GuiFont! DejaVu Sans Mono for Powerline:h8 <CR> 
-  " GuiFont! DejaVu Sans Mono for Powerline:h10
-  " GuiFont! Hack:h10
-
-  nnoremap <tab> :CtrlPBuffer <CR>
-
   " Configure ALE
   let g:ale_linters = {'python': ['flake8']}
   " - Python
@@ -59,53 +64,11 @@ if has("win32")
   let g:ale_python_flake8_options = '-m flake8'
   " -- C/Cpp
   " Configured using .local.vimrc files
-
   " Use deoplete.
   let g:deoplete#enable_at_startup = 1
   " Only load clang when dotfile
   let g:clang_load_if_clang_dotfile = 1
-else
-  " On mac
-  " http://vimr.org/ <-- this seem like a solid alternative to neovim-qt
-  " for windows??
-  " Mac pre plugins setup
-  let g:airline_powerline_fonts = 1
-  call plug#begin('~/dev/VimPlugs')
-
-  " Mac plugins
-  " The dracula color plugin
-  Plug 'dracula/vim'
-  Plug 'morhetz/gruvbox'
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
-  Plug 'rakr/vim-one'
-  Plug 'pangloss/vim-javascript'
-  Plug 'ctrlpvim/ctrlp.vim'
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  Plug 'carlitux/deoplete-ternjs'
-  Plug 'thinca/vim-localrc'
-  Plug 'zchee/deoplete-clang'
-  "Plug 'tweekmonster/deoplete-clang2'
-  Plug 'rhysd/vim-clang-format'
-  Plug 'octol/vim-cpp-enhanced-highlight'
-  Plug 'jremmen/vim-ripgrep'
-  Plug 'maksimr/vim-jsbeautify'
-  Plug 'tpope/vim-fugitive'
-  Plug 'junegunn/gv.vim'
-  Plug 'scrooloose/nerdcommenter'
-  Plug 'jceb/vim-orgmode'
-  Plug 'tpope/vim-speeddating'
-  Plug 'enricobacis/vim-airline-clock'
-  Plug 'NLKNguyen/papercolor-theme' " Awsome bright theme
-  " TODO: Fix the unimpaired vim plugin for better mappings
-  Plug 'philip-karlsson/bolt.nvim'
-  Plug 'w0rp/ale'
-  Plug 'sebastianmarkow/deoplete-rust'
-  Plug 'Shougo/neoinclude.vim'
-  Plug 'haya14busa/incsearch.vim'
-
-  call plug#end()
-
+elsif has("macunix")
   " Use deoplete.
   let g:deoplete#enable_at_startup = 1
   let g:deoplete#sources#clang#libclang_path = '/usr/local/Cellar/llvm/5.0.0/lib/libclang.dylib'
@@ -117,30 +80,48 @@ else
   let g:deoplete#sources#rust#rust_source_path='/Users/philipkarlsson/dev/Rust/src'
 
   " Configure ALE
-  " let g:ale_linters = {'python': ['flake8']}
   let g:ale_linters = {'python': ['flake8'], 'cpp': ['clang']}
   " - Python
   let g:ale_python_flake8_executable = 'python3'
   let g:ale_python_flake8_options = '-m flake8'
   " -- C/Cpp
   " Configured using .local.vimrc files
-
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-
-  " Set the theme
-  set background=light 
-  colorscheme PaperColor
-  " colorscheme dracula
-  "set background=light
-  " let g:airline_theme='atomic'
-
-  nnoremap <c-tab> <tab>
-  nnoremap <tab> :CtrlPBuffer <CR>
-
   autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+else
+  " To be done
 endif
+
+" Manage GUI settings
+if has("win32")
+  if has("gui_running")
+    set termguicolors
+    set background=light 
+    colorscheme PaperColor
+  else
+  endif
+elsif has("macunix")
+  if has("gui_running")
+    set termguicolors
+    set background=light 
+    colorscheme PaperColor
+  else
+  endif
+else
+  if has("gui_running")
+  else
+    colorscheme industry
+  endif
+endif
+
+" General Vim settings (platform and GUI independent)
+set nohlsearch
+set number relativenumber
+set nowrap
+imap jk <esc>
+" Set tabs correctly
+set cindent
+set shiftwidth=2
+set expandtab
 
 " Post plugin initialization settings
 nnoremap + :
@@ -155,11 +136,3 @@ nnoremap <c-l> :cnext <CR>
 nnoremap <Space> :set hlsearch! <CR>
 let mapleader = ","
 
-
-" Enable logging of deoplete
-" let g:deoplete#enable_profile = 1
-" call deoplete#enable_logging('DEBUG', 'deoplete.log')
-
-" TODOs 2018-02-13
-" Change plugin to use vim-clang instead of deoplete (need crossplatform and
-" to be able to debug)
