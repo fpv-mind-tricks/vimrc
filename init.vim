@@ -2,7 +2,7 @@
 if has("win32")
   let g:python3_host_prog  = 'C:/Python34/python.exe'
   call plug#begin('C:/Temp/Plugins')
-elsif has("macunix")
+elseif has("macunix")
   call plug#begin('~/dev/VimPlugs')
 else
   let g:python3_host_prog  = 'python3'
@@ -43,7 +43,7 @@ Plug 'haya14busa/incsearch.vim'
 
 " Install platform specific plugins
 if has("win32")
-elsif has("macunix")
+elseif has("macunix")
 else
 endif
 
@@ -68,7 +68,7 @@ if has("win32")
   let g:deoplete#enable_at_startup = 1
   " Only load clang when dotfile
   let g:clang_load_if_clang_dotfile = 1
-elsif has("macunix")
+elseif has("macunix")
   " Use deoplete.
   let g:deoplete#enable_at_startup = 1
   let g:deoplete#sources#clang#libclang_path = '/usr/local/Cellar/llvm/5.0.0/lib/libclang.dylib'
@@ -99,12 +99,14 @@ if has("win32")
     colorscheme PaperColor
   else
   endif
-elsif has("macunix")
+elseif has("mac") || has("macunix")
   if has("gui_running")
     set termguicolors
     set background=light 
     colorscheme PaperColor
   else
+    set background=light 
+    colorscheme PaperColor
   endif
 else
   if has("gui_running")
