@@ -111,7 +111,6 @@ elseif has("mac") || has("macunix")
 else
   if has("gui_running")
   else
-    colorscheme industry
   endif
 endif
 
