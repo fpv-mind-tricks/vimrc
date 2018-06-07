@@ -1,6 +1,6 @@
 " Platform specific preconds
 if has("win32")
-  let g:python3_host_prog  = 'C:/Python34/python.exe'
+  let g:python3_host_prog  = 'C:/Python36/python.exe'
   call plug#begin('C:/Temp/Plugins')
 elseif has("macunix")
   call plug#begin('~/dev/VimPlugs')
@@ -93,12 +93,9 @@ endif
 
 " Manage GUI settings
 if has("win32")
-  if has("gui_running")
-    set termguicolors
-    set background=light 
-    colorscheme PaperColor
-  else
-  endif
+  set termguicolors
+  set background=light 
+  colorscheme PaperColor
 elseif has("mac") || has("macunix")
   if has("gui_running")
     set termguicolors
