@@ -133,4 +133,6 @@ nnoremap <c-h> :cprevious <CR>
 nnoremap <c-l> :cnext <CR>
 nnoremap <Space> :set hlsearch! <CR>
 let mapleader = ","
-
+" Jump to tag: / c-t goes backwards
+nnoremap t <C-]>
+nnoremap T :tnext <CR>
