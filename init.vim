@@ -40,6 +40,7 @@ Plug 'w0rp/ale'
 Plug 'sebastianmarkow/deoplete-rust'
 Plug 'Shougo/neoinclude.vim'
 Plug 'haya14busa/incsearch.vim'
+Plug 'mfukar/robotframework-vim'
 
 " Install platform specific plugins
 if has("win32")
@@ -128,7 +129,7 @@ map f <Plug>(incsearch-forward)
 nnoremap F ?
 nnoremap å :Tc <CR>
 nnoremap ö :Rg <CR>
-nnoremap ä :checktime <CR>
+nnoremap ä :TcCwd <CR>
 nnoremap <c-h> :cprevious <CR>
 nnoremap <c-l> :cnext <CR>
 nnoremap <Space> :set hlsearch! <CR>
