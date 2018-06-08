@@ -20,7 +20,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'carlitux/deoplete-ternjs'
 Plug 'thinca/vim-localrc'
-Plug 'zchee/deoplete-clang'
+"Plug 'zchee/deoplete-clang'
 "Plug 'tweekmonster/deoplete-clang2'
 Plug 'rhysd/vim-clang-format'
 Plug 'octol/vim-cpp-enhanced-highlight'
