@@ -107,9 +107,8 @@ elseif has("mac") || has("macunix")
     colorscheme PaperColor
   endif
 else
-  if has("gui_running")
-  else
-  endif
+  set background=light
+  colorscheme PaperColor
 endif
 
 " General Vim settings (platform and GUI independent)
