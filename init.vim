@@ -101,7 +101,6 @@ elseif has("mac") || has("macunix")
     set termguicolors
     set background=light 
     colorscheme PaperColor
-  endif
 else
   set background=light
   colorscheme PaperColor
