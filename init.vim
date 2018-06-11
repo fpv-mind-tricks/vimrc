@@ -98,11 +98,7 @@ if has("win32")
   set background=light 
   colorscheme PaperColor
 elseif has("mac") || has("macunix")
-  if has("gui_running")
     set termguicolors
-    set background=light 
-    colorscheme PaperColor
-  else
     set background=light 
     colorscheme PaperColor
   endif
