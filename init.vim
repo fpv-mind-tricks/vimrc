@@ -98,7 +98,8 @@ if has("win32")
   set background=light 
   colorscheme PaperColor
 elseif has("mac") || has("macunix")
-    set termguicolors
+    " shall not be used when working in terminal 
+    " set termguicolors
     set background=light 
     colorscheme PaperColor
 else
