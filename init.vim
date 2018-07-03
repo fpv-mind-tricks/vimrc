@@ -36,11 +36,13 @@ Plug 'NLKNguyen/papercolor-theme' " Awsome bright theme
 " TODO: Fix the unimpaired vim plugin for better mappings
 " MOST IMPORTANT PLUGIN EVER :)
 Plug 'philip-karlsson/bolt.nvim'
+Plug 'philip-karlsson/midi.nvim'
 Plug 'w0rp/ale'
 Plug 'sebastianmarkow/deoplete-rust'
 Plug 'Shougo/neoinclude.vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'mfukar/robotframework-vim'
+Plug 'cohlin/vim-colorschemes'
 
 " Install platform specific plugins
 if has("win32")
@@ -102,6 +104,7 @@ elseif has("mac") || has("macunix")
     " set termguicolors
     set background=light 
     colorscheme PaperColor
+    let g:airline_theme = "bubblegum"
 else
   set background=light
   colorscheme PaperColor
