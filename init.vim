@@ -43,6 +43,7 @@ Plug 'Shougo/neoinclude.vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'mfukar/robotframework-vim'
 Plug 'cohlin/vim-colorschemes'
+Plug 'aklt/plantuml-syntax'
 
 " Install platform specific plugins
 if has("win32")
@@ -59,7 +60,7 @@ nnoremap <tab> :CtrlPBuffer <CR>
 
 " Platform specific settings/hacks/workarounds
 if has("win32")
-  nnoremap <F3> :GuiFont! DejaVu Sans Mono for Powerline:h8 <CR> 
+  nnoremap <F3> :GuiFont! DejaVu Sans Mono for Powerline:h10 <CR> 
   " Configure ALE
   let g:ale_linters = {'python': ['flake8']}
   " - Python
