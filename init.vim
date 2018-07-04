@@ -109,6 +109,7 @@ elseif has("mac") || has("macunix")
 else
   set background=light
   colorscheme PaperColor
+  let g:airline_theme = "bubblegum"
 endif
 
 " General Vim settings (platform and GUI independent)
