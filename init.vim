@@ -44,6 +44,7 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'mfukar/robotframework-vim'
 Plug 'cohlin/vim-colorschemes'
 Plug 'aklt/plantuml-syntax'
+Plug 'sgeb/vim-diff-fold'
 
 " Install platform specific plugins
 if has("win32")
