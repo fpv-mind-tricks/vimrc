@@ -101,6 +101,7 @@ if has("win32")
   set termguicolors
   set background=light 
   colorscheme PaperColor
+  let g:airline_theme = "bubblegum"
 elseif has("mac") || has("macunix")
     " shall not be used when working in terminal 
     " set termguicolors
@@ -129,7 +130,9 @@ map f <Plug>(incsearch-forward)
 " nnoremap f /
 nnoremap F ?
 nnoremap å :Tc <CR>
-nnoremap ö :Rg <CR>
+" More correct as 'ö' is what : 
+" corresponds to on a US keyboard
+nnoremap ö :
 nnoremap ä :TcCwd <CR>
 nnoremap <c-h> :cprevious <CR>
 nnoremap <c-l> :cnext <CR>
