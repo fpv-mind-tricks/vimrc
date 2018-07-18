@@ -130,10 +130,11 @@ map f <Plug>(incsearch-forward)
 " nnoremap f /
 nnoremap F ?
 nnoremap å :Tc <CR>
+nnoremap Å :TcCwd <CR>
 " More correct as 'ö' is what : 
 " corresponds to on a US keyboard
 nnoremap ö :
-nnoremap ä :TcCwd <CR>
+nnoremap ä :
 nnoremap <c-h> :cprevious <CR>
 nnoremap <c-l> :cnext <CR>
 nnoremap <Space> :set hlsearch! <CR>
