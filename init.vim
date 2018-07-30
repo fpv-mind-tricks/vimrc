@@ -46,9 +46,11 @@ Plug 'cohlin/vim-colorschemes'
 Plug 'aklt/plantuml-syntax'
 Plug 'sgeb/vim-diff-fold'
 
+
 " Install platform specific plugins
 if has("win32")
-elseif has("macunix")
+elseif has("mac") || has("macunix")
+  Plug '~/dev/VimPlugs/ScpSync/'
 else
 endif
 
@@ -104,7 +106,7 @@ if has("win32")
   let g:airline_theme = "bubblegum"
 elseif has("mac") || has("macunix")
     " shall not be used when working in terminal 
-    " set termguicolors
+    set termguicolors
     set background=light 
     colorscheme PaperColor
     let g:airline_theme = "bubblegum"
