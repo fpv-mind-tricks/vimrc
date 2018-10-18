@@ -37,6 +37,7 @@ Plug 'NLKNguyen/papercolor-theme' " Awsome bright theme
 " MOST IMPORTANT PLUGIN EVER :)
 Plug 'philip-karlsson/bolt.nvim'
 Plug 'philip-karlsson/midi.nvim'
+Plug 'philip-karlsson/utils.nvim'
 Plug 'w0rp/ale'
 Plug 'sebastianmarkow/deoplete-rust'
 Plug 'Shougo/neoinclude.vim'
@@ -49,6 +50,7 @@ Plug 'sgeb/vim-diff-fold'
 
 " Install platform specific plugins
 if has("win32")
+  " Plug 'C:/Temp/LocalPlugins/Utils'
 elseif has("mac") || has("macunix")
   Plug '~/dev/VimPlugs/ScpSync/'
 else
