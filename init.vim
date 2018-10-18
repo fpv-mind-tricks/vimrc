@@ -101,8 +101,8 @@ endif
 " Manage GUI settings
 if has("win32")
   set termguicolors
-  set background=light 
-  colorscheme PaperColor
+  set background=dark 
+  colorscheme gruvbox
   let g:airline_theme = "bubblegum"
 elseif has("mac") || has("macunix")
     " shall not be used when working in terminal 
