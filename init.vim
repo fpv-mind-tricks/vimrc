@@ -36,7 +36,6 @@ Plug 'NLKNguyen/papercolor-theme' " Awsome bright theme
 " TODO: Fix the unimpaired vim plugin for better mappings
 " MOST IMPORTANT PLUGIN EVER :)
 Plug 'philip-karlsson/bolt.nvim'
-Plug 'philip-karlsson/midi.nvim'
 Plug 'philip-karlsson/utils.nvim'
 Plug 'w0rp/ale'
 Plug 'sebastianmarkow/deoplete-rust'
@@ -53,6 +52,7 @@ if has("win32")
   " Plug 'C:/Temp/LocalPlugins/Utils'
 elseif has("mac") || has("macunix")
   Plug '~/dev/VimPlugs/ScpSync/'
+  Plug 'philip-karlsson/midi.nvim'
 else
 endif
 
@@ -113,8 +113,8 @@ elseif has("mac") || has("macunix")
     colorscheme PaperColor
     let g:airline_theme = "bubblegum"
 else
-  set background=light
-  colorscheme PaperColor
+  set background=dark 
+  colorscheme gruvbox
   let g:airline_theme = "bubblegum"
 endif
 
