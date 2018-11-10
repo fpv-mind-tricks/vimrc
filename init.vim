@@ -109,8 +109,8 @@ if has("win32")
 elseif has("mac") || has("macunix")
     " shall not be used when working in terminal 
     set termguicolors
-    set background=light 
-    colorscheme PaperColor
+    set background=dark 
+    colorscheme gruvbox
     let g:airline_theme = "bubblegum"
 else
   set background=dark 
