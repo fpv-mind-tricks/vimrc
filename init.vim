@@ -116,6 +116,7 @@ else
   set background=dark 
   colorscheme gruvbox
   let g:airline_theme = "bubblegum"
+  let g:airline_powerline_fonts = 1
 endif
 
 " General Vim settings (platform and GUI independent)
