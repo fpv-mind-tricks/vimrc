@@ -126,8 +126,9 @@ set nowrap
 imap jk <esc>
 " Set tabs correctly
 set cindent
-set shiftwidth=2
+set shiftwidth=4
 set expandtab
+set list
 
 " Post plugin initialization settings
 nnoremap + :
