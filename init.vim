@@ -1,6 +1,6 @@
 " Platform specific preconds
 if has("win32")
-  let g:python3_host_prog  = 'C:/Python36/python.exe'
+  let g:python3_host_prog  = 'c:\Users\h657672\AppData\Local\Programs\Python\Python37-32\python.exe'
   call plug#begin('C:/Temp/Plugins')
 elseif has("macunix")
   call plug#begin('~/dev/VimPlugs')
@@ -105,7 +105,7 @@ if has("win32")
   set termguicolors
   set background=dark 
   colorscheme gruvbox
-  let g:airline_theme = "bubblegum"
+  let g:airline_theme = "gruvbox"
 elseif has("mac") || has("macunix")
     " shall not be used when working in terminal 
     set termguicolors
