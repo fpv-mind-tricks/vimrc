@@ -45,6 +45,8 @@ Plug 'mfukar/robotframework-vim'
 Plug 'cohlin/vim-colorschemes'
 Plug 'aklt/plantuml-syntax'
 Plug 'sgeb/vim-diff-fold'
+" Wiki plugin
+Plug 'vimwiki/vimwiki'
 
 
 " Install platform specific plugins
