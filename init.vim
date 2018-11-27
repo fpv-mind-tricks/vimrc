@@ -132,6 +132,12 @@ set shiftwidth=4
 set expandtab
 set list
 
+" Override filetypes
+" Set the filetype based on the file's extension, overriding any
+" 'filetype' that has already been set
+au BufRead,BufNewFile sconstruct set filetype=python
+au BufRead,BufNewFile sconscript set filetype=python
+
 " Post plugin initialization settings
 nnoremap + :
 map f <Plug>(incsearch-forward)
