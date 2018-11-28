@@ -31,7 +31,8 @@ Plug 'junegunn/gv.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
-Plug 'enricobacis/vim-airline-clock'
+" Possible memory leak ?
+" Plug 'enricobacis/vim-airline-clock'
 Plug 'NLKNguyen/papercolor-theme' " Awsome bright theme
 " TODO: Fix the unimpaired vim plugin for better mappings
 " MOST IMPORTANT PLUGIN EVER :)
@@ -56,6 +57,8 @@ elseif has("mac") || has("macunix")
   Plug '~/dev/VimPlugs/ScpSync/'
   Plug 'philip-karlsson/midi.nvim'
 else
+  " Linux prototype plugins
+  Plug '~/dev/PluginPrototypes/GetCCFlags.nvim'
 endif
 
 " Finalize plugin installation
@@ -156,3 +159,10 @@ let mapleader = ","
 " Jump to tag: / c-t goes backwards
 nnoremap t <C-]>
 nnoremap T :tnext <CR>
+
+" Hide FZF statusline
+autocmd! FileType fzf
+autocmd  FileType fzf set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+" Bind fzf to c-f
+nnoremap <c-f> :FZF <CR>
